@@ -1,5 +1,4 @@
 package com.example.exercice1
-import android.provider.MediaStore.Images.Thumbnails.getThumbnail
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -10,13 +9,13 @@ import com.example.exercice1.databinding.CellCustomBinding
 import com.squareup.picasso.Picasso
 import com.example.exercice1.network.Plate
 
-class CustomAdapter(val items: List<String>, val clickListener:(Int) -> Unit): RecyclerView.Adapter<CustomAdapter.CellViewHolder>() {
+class CustomAdapter(val items: List<Plate>, val clickListener:(Plate) -> Unit): RecyclerView.Adapter<CustomAdapter.CellViewHolder>() {
     class CellViewHolder(binding: CellCustomBinding) : RecyclerView.ViewHolder(binding.root) {
 
         val textView: TextView = binding.itemName
-        val root : ConstraintLayout = binding.root
         val imageView = binding.imageView
         val priceTextView = binding.priceTextView
+        val root = binding.root
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CellViewHolder {
