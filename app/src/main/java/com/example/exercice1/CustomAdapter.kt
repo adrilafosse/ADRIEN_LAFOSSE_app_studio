@@ -1,5 +1,4 @@
 package com.example.exercice1
-import android.provider.MediaStore.Images.Thumbnails.getThumbnail
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
